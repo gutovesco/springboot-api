@@ -1,7 +1,7 @@
 package com.example.springbootbackend.controller;
 
-import com.example.springbootbackend.model.User;
-import com.example.springbootbackend.repository.UserRepository;
+import com.example.springbootbackend.model.Preventions;
+import com.example.springbootbackend.repository.PreventionsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,13 +13,13 @@ import java.util.List;
 @CrossOrigin(origins = "http://localhost:3002")
 @RestController
 @RequestMapping("api/")
-public class UserController {
+public class PreventionsController{
 
     @Autowired
-    private UserRepository userRepository;
+    private PreventionsRepository preventionsRepository;
 
-    @GetMapping("users")
-    public List < User > getUsers() {
-        return this.userRepository.findAll();
+    @GetMapping("preventions")
+    public List < Preventions > getPreventions() {
+        return this.preventionsRepository.findAll();
     }
 }
