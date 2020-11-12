@@ -29,6 +29,5 @@ public class SpringbootBackendApplication implements CommandLineRunner {
 		this.userRepository.save(new User ("Caio", "Faria", "caio.faria@hotmail.com"));
 		this.preventionsRepository.save(new Preventions ("Lave as mãos", "O virus causa infecções gastrointestinais e infecções respiratórias, por isso é sempre importante higienizar as mãos!", "https://image.freepik.com/free-vector/new-normal-concept-woman-wear-masks-using-alcohol-antiseptic-gel-clean-hands-prevent-corona-virus-illustration-flat-style-isolated-white-background_185694-73.jpg"));
 		this.preventionsRepository.save(new Preventions ("Use máscara", "Desde o início da pandemia diversos estabelecimentos adotaram a política de uso obrigatório da máscara, seja responsável e use para impedir a ploriferação do vírus!", "https://cdn3.vectorstock.com/i/1000x1000/71/07/young-man-using-face-mask-isolated-icon-vector-30897107.jpg"));
-
 	}
 }
