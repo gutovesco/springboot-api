@@ -1,4 +1,4 @@
-<strong style={{fontSize: 20}}>Guia de utilização:</strong>
+<h2 style={{fontSize: 20, fontWeight: 'bold'}}>Guia de utilização:</h2>
 
 <p>1 - Clonar/baixar o repositório</p>
 <p>2 - Abrir o projeto na IDE</p>
