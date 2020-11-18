@@ -1,13 +1,7 @@
 package com.example.springbootbackend;
 
-import com.example.springbootbackend.model.Cases;
-import com.example.springbootbackend.model.News;
-import com.example.springbootbackend.model.Preventions;
-import com.example.springbootbackend.model.User;
-import com.example.springbootbackend.repository.CasesRepository;
-import com.example.springbootbackend.repository.NewsRepository;
-import com.example.springbootbackend.repository.PreventionsRepository;
-import com.example.springbootbackend.repository.UserRepository;
+import com.example.springbootbackend.model.*;
+import com.example.springbootbackend.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -34,6 +28,9 @@ public class SpringbootBackendApplication implements CommandLineRunner {
 
 	@Autowired
 	private CasesRepository casesRepository;
+
+	@Autowired
+	private NewsletterEmailRepository newsletterEmailRepository;
 
 	@Override
 	public void run(String... args) throws Exception {
@@ -64,6 +61,8 @@ public class SpringbootBackendApplication implements CommandLineRunner {
 			this.casesRepository.save(new Cases ("1", "Jaguariúna", "1200 casos confirmados. 104 casos em investigação. 3083 casos descartados. 1118 curados.", "https://municipio.jaguariuna.sp.gov.br/coronavirus/"));
 			this.casesRepository.save(new Cases ("2", "Mogi Guaçu", "3531 casos confirmados. 281 casos agurdando resultado. 10322 casos negativos. 14.134 casos notificados.", "https://mogiguacu.sp.gov.br/noticias/6009/confira-o-boletim-de-casos-de-covid-19-deste-domingo"));
 			this.casesRepository.save(new Cases (thirdCase.getNumber (), thirdCase.getTitle (), thirdCase.getDescription (), thirdCase.getUrl ( ) ));
+			this.newsletterEmailRepository.save(new NewsletterEmail("guto@gmail.com"));
+			this.newsletterEmailRepository.save(new NewsletterEmail("augusto@gmail.com"));
 		}catch (Exception err){
 			System.out.println(err);
 		}
