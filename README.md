@@ -1,3 +1,10 @@
+<h2>Integrantes do grupo</h2>
+<ul>
+    <li>Augusto Vesco Raveli</li>
+    <li>Lucas de Souza Bocalini</li>
+    <li>Samuel Marques dos Santos</li>
+</ul>
+
 <h2 style={{fontSize: 20, fontWeight: 'bold'}}>Guia de utilização:</h2>
 
 <p>1 - Clonar/baixar o repositório</p>
