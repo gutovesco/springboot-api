@@ -19,3 +19,9 @@
     <li>http://localhost:8080/api/news</li>
     <li>http://localhost:8080/api/newsletter/1</li>
 </ul>
+
+##Caso nao estiver carregando os dados do front é porque a api está apontando para outra porta, nos controllers a api está observando a porta 3002, como no código a seguir:
+
+@CrossOrigin(origins = "http://localhost:3002")
+
+Para testar o front, trocar o numero para a porta que a sua aplicação está rodando (por padrão é a porta 3000, portanto http://localhost:3000). Fazer isso em todos os arquivos controllers.
